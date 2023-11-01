@@ -1,0 +1,11 @@
+let arithmetic = this.state.question;
+//split the string by numbers and operators
+let numbers = arithmetic.split(/\+|\-|\*|\//g);
+console.log(numbers);
+//split the string by operators
+let operators = arithmetic.replace(/[0-9]|\./g, "").split("");
+console.log(operators);
+
+// combine both arrays as per string
+let arr = [...numbers, ...operators];
+console.log(arr);
